@@ -71,21 +71,27 @@ h1 {
     <h1>My Image Gallery</h1>
 
     <div class="gallery">
-        <img src="img1.jpg">
-        <img src="img2.jpg">
-        <img src="img3.jpg">
-        <img src="img4.jpg">
-        <img src="img5.jpg">
-        <img src="img6.jpg">
-        <img src="img7.jpg">
-        <img src="img8.jpg">
-        <img src="img9.jpg">
-        <img src="img10.jpg">
-        <img src="img11.jpg">
-        <img src="img12.jpg">
-        <img src="img13.jpg">
-        <img src="img14.jpg">
+    <img src="img1.jpg" onclick="openImg(this.src)">
+    <img src="img2.jpg" onclick="openImg(this.src)">
+    <img src="img3.jpg" onclick="openImg(this.src)">
+    <img src="img4.jpg" onclick="openImg(this.src)">
     </div>
 
+<div class="modal" id="modal">
+    <span class="close" onclick="closeImg()">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+function openImg(src) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalImg").src = src;
+}
+
+function closeImg() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+    
 </body>
 </html>
