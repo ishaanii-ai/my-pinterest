@@ -20,10 +20,10 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* Pinterest style grid */
 .gallery {
-    column-count: 3;
-    column-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
 }
 
 .gallery img {
